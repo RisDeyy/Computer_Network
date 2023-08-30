@@ -12,6 +12,7 @@ import Keystroke_Client				# KeyStroke.py
 import processRunning_Client		# process_function.py
 import appRunning_Client			# application_function.py
 import screenCapture_Client			# screenCapture.py
+import edit_Registry_Client			# edit_Registry.py
 
 #AF_INET        : cho biết đang yêu cầu một socket Internet Protocol(IP), cụ thể là IPv4
 #SOCK_STREAM    : chỉ loại kết nối TCP IP hoặc UDP . Chương trình nhóm em sẽ chạy trên một cổng kết nối TCP
@@ -59,27 +60,31 @@ class Main:
 	# Process Running
 		self.btnProcess= PhotoImage(file='./img/button/button-process-running.png')                      # Đặt hình ảnh
 		self.process = Button(self.login, image = self.btnProcess, command =(lambda : self.process_function(Client)))
-		self.process.place(relx = 0.05, rely = 0.4)
+		self.process.place(relx = 0.05, rely = 0.3)
 	# App Running
 		self.btnApp= PhotoImage(file='./img/button/button-running.png')                      # Đặt hình ảnh
 		self.app = Button (self.login, image=self.btnApp, command = (lambda : self.application_function(Client)))
-		self.app.place(relx = 0.240, rely = 0.4)
-	# Chụp màn hình
+		self.app.place(relx = 0.240, rely = 0.3)
+	# screen capture
 		self.btnSCapture= PhotoImage(file='./img/button/button-screen-capture.png')                      # Đặt hình ảnh
 		self.capture = Button(self.login,  image=self.btnSCapture, command = (lambda : self.screenCapture(Client)))
-		self.capture.place(relx = 0.240, rely = 0.758)
+		self.capture.place(relx = 0.240, rely = 0.658)
 	# Keystroke
 		self.btnKStroke= PhotoImage(file='./img/button/button-keystroke.png')                      # Đặt hình ảnh
 		self.key = Button(self.login, image = self.btnKStroke, command = (lambda : self.keyStroke(Client)))
-		self.key.place(relx = 0.765, rely = 0.4)
-	# Tắt máy
+		self.key.place(relx = 0.765, rely = 0.3)
+	# shutdown
 		self.btnSDwon= PhotoImage(file='./img/button/button-shut-down.png')                      # Đặt hình ảnh
 		self.shut = Button(self.login, image = self.btnSDwon, command = (lambda : self.shutDown(Client)))
-		self.shut.place(relx = 0.245, rely = 0.58)
-	# Thoát
+		self.shut.place(relx = 0.245, rely = 0.48)
+	# exit
 		self.btnExist= PhotoImage(file='./img/button/button-exit.png')                      # Đặt hình ảnh
 		self.escape = Button(self.login, image = self.btnExist, command = (lambda : self.Exit(Client)))
-		self.escape.place(relx = 0.505, rely = 0.58)      
+		self.escape.place(relx = 0.505, rely = 0.48)    
+	# Edit Registry
+		self.btneditRegistry = PhotoImage(file='./img/button/button-edit-registry.png')  # Đặt hình ảnh
+		self.edit_registry = Button(self.login, image=self.btneditRegistry, command=(lambda: self.edit_Registry(Client)))
+		self.edit_registry.place(relx=0.05, rely=0.824)  
 	
 #Hàm chụp ảnh màn hình
 	def screenCapture(self, Client):
@@ -106,6 +111,13 @@ class Main:
 	def keyStroke(self, Client):
 		try:
 			Keystroke_Client.keystroke(Client)		# Đọc hàm keystroke của file Keystroke_Client.py
+		except:
+			messagebox.showinfo("Error !!!", "Lỗi kết nối ")
+
+# Hàm chỉnh sửa Registry
+	def edit_Registry(self, Client):
+		try:
+			edit_Registry_Client.edit_Registry(Client)		# Đọc chỉnh sửa registry của file edit_Registry_Client.py
 		except:
 			messagebox.showinfo("Error !!!", "Lỗi kết nối ")
 

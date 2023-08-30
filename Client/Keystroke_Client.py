@@ -53,7 +53,7 @@ def keystroke(client):
 		def Deletekey():										# Hàm xóa toàn bộ dữ liệu trong Textbox
 			tab.delete(1.0,END)									# Xóa toàn bộ dữ liệu trong Textbox
 					    
-		hook = Button(Stroke, text = "Hook", font = "Helvetica 10 bold",width=6, bg = "#8DDDE0", activebackground='#497172', padx = 17, pady = 20, command = Hookkey).grid(row = 1,column = 0,sticky=E)
-		unhook = Button(Stroke, text = "Unhook",font = "Helvetica 10 bold",width=6 , bg = "#F9BDC0", activebackground='#7e5a5c', padx = 17, pady = 20, command = Unhookkey).grid(row = 1,column = 1,sticky=E) 
-		print = Button(Stroke, text = "Print",font = "Helvetica 10 bold",width=6 ,bg = "#FBE698", activebackground='#776d47', padx = 17, pady = 20,command = Printkey).grid(row = 1,column = 2,sticky=E)
-		delete = Button(Stroke, text = "Delete", font = "Helvetica 10 bold",width=6 , bg = "#8B795E", activebackground='#3f302a',padx = 17, pady = 25,command = Deletekey).grid(row = 1,column = 3,sticky=E)
+		hook = Button(Stroke, text = "Hook", font = "Helvetica 10 bold",width=6, bg = "#C0BED7", activebackground='#C2BEEF', padx = 17, pady = 20, command = Hookkey).grid(row = 1,column = 0,sticky=E)
+		unhook = Button(Stroke, text = "Unhook",font = "Helvetica 10 bold",width=6 , bg = "#C0BED7", activebackground='#C2BEEF', padx = 17, pady = 20, command = Unhookkey).grid(row = 1,column = 1,sticky=E) 
+		print = Button(Stroke, text = "Print",font = "Helvetica 10 bold",width=6 ,bg = "#C0BED7", activebackground='#C2BEEF', padx = 17, pady = 20,command = Printkey).grid(row = 1,column = 2,sticky=E)
+		delete = Button(Stroke, text = "Delete", font = "Helvetica 10 bold",width=6 , bg = "#AE3636", activebackground='#A71919',padx = 17, pady = 20,command = Deletekey).grid(row = 1,column = 3,sticky=E)

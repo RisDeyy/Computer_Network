@@ -114,7 +114,7 @@ def application_function(self, client):
 				except:
 					messagebox.showinfo("Error !!!", "Không tìm thấy chương trình")	# Thông báo không tìm thấy chương trình
 
-		Start = Button(self.app, text="Start", bg = "#E6E9D0", activebackground='#bec0b1', font = "Helvetica 11 bold",padx = 30, pady = 20, command = Start_App, bd = 5).grid(row = 0, column = 0, padx = 8)
-		Watch = Button(self.app, text = "Watch",bg = "#F9BDC0", activebackground='#7e5a5c',font = "Helvetica 11 bold", padx = 30,  pady = 20, command = Watch_App, bd = 5).grid(row = 0, column = 1, padx = 8)
-		Kill = Button( self.app, text = "Kill",bg = "#8DDDE0", activebackground='#497172',font = "Helvetica 11 bold", padx = 30,  pady = 20, command= Kill_App, bd = 5).grid(row = 0, column = 2, padx = 8)
-		Delete = Button(self.app, text =  "Delete",bg = "#FBE698", activebackground='#776d47', font = "Helvetica 11 bold",padx = 30, pady = 20, command = Clear, bd = 5).grid(row = 0, column = 3, padx = 8)
+		Start = Button(self.app, text="Start", bg = "#C0BED7", activebackground='#C2BEEF', font = "Helvetica 11 bold",padx = 30, pady = 20, command = Start_App, bd = 5).grid(row = 0, column = 0, padx = 8)
+		Watch = Button(self.app, text = "Watch",bg = "#C0BED7", activebackground='#C2BEEF',font = "Helvetica 11 bold", padx = 30,  pady = 20, command = Watch_App, bd = 5).grid(row = 0, column = 1, padx = 8)
+		Kill = Button( self.app, text = "Kill",bg = "#C0BED7", activebackground='#C2BEEF',font = "Helvetica 11 bold", padx = 30,  pady = 20, command= Kill_App, bd = 5).grid(row = 0, column = 2, padx = 8)
+		Delete = Button(self.app, text =  "Delete",bg = "#AE3636", activebackground='#A71919', font = "Helvetica 11 bold",padx = 30, pady = 20, command = Clear, bd = 5).grid(row = 0, column = 3, padx = 8)

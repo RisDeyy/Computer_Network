@@ -112,7 +112,7 @@ def process_function(self, client):
             except:
                 messagebox.showinfo("Error !!!", "Không tìm thấy chương trình")   # Thông báo lỗi
 
-    Start = Button(self.process, text="Start", font="Helvetica 10 bold", padx=30, pady=20, command=Start_Process, bd=5, bg = "#E6E9D0", activebackground='#bec0b1').grid(row=0, column=0, padx=8)
-    Watch = Button(self.process, text="Watch", font="Helvetica 10 bold", padx=30, pady=20, command=Watch_Processes, bd=5, bg = "#F9BDC0", activebackground='#7e5a5c').grid(row=0, column=1, padx=8)
-    Kill = Button(self.process, text="Kill", font="Helvetica 10 bold", padx=30, pady=20, command=Kill_Process, bd=5, bg = "#8DDDE0", activebackground='#497172').grid(row=0, column=2, padx=8)
-    Delete = Button(self.process, text="Delete", font="Helvetica 10 bold", padx=30, pady=20, command=Clear, bd=5, bg = "#FBE698", activebackground='#776d47').grid(row=0, column=3, padx=8)
+    Start = Button(self.process, text="Start", font="Helvetica 10 bold", padx=30, pady=20, command=Start_Process, bd=5, bg = "#C0BED7", activebackground='#C2BEEF').grid(row=0, column=0, padx=8)
+    Watch = Button(self.process, text="Watch", font="Helvetica 10 bold", padx=30, pady=20, command=Watch_Processes, bd=5, bg = "#C0BED7", activebackground='#C2BEEF').grid(row=0, column=1, padx=8)
+    Kill = Button(self.process, text="Kill", font="Helvetica 10 bold", padx=30, pady=20, command=Kill_Process, bd=5, bg = "#C0BED7", activebackground='#C2BEEF').grid(row=0, column=2, padx=8)
+    Delete = Button(self.process, text="Delete", font="Helvetica 10 bold", padx=30, pady=20, command=Clear, bd=5, bg = "#AE3636", activebackground='#A71919').grid(row=0, column=3, padx=8)
